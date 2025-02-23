@@ -1,5 +1,10 @@
 package org.scesi.usecases
 
-class GetTeamsUseCase() {
-    suspend operator fun invoke(){}
+import org.scesi.domain.repositories.TeamRepository
+
+class GetTeamsUseCase(
+    private val teamRepository: TeamRepository
+) {
+    suspend operator fun invoke() =
+        teamRepository.getAllTeams()
 }
