@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "org.scesi.esqueleto"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "org.scesi.esqueleto"

@@ -1,9 +1,9 @@
 package org.scesi.esqueleto.data.server
 
-import org.scesi.esqueleto.data.server.models.TeamsResponse
+import org.scesi.esqueleto.data.server.models.TeamRemote
 import retrofit2.http.GET
 
 interface TeamService {
-    @GET("not-yet")
-    suspend fun getTeams(): TeamsResponse
+    @GET("366f9b08-7d72-4b9c-adb6-828c4aaddef6")
+    suspend fun getTeams(): List<TeamRemote>
 }

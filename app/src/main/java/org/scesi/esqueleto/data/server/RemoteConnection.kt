@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.create
 
 object RemoteConnection {
-    private const val BASE_URL = "https://mocki.io/v1/366f9b08-7d72-4b9c-adb6-828c4aaddef6"
+    private const val BASE_URL = "https://mocki.io/v1/"
 
     private val json = Json {
         ignoreUnknownKeys = true
@@ -26,8 +26,8 @@ object RemoteConnection {
     private val builder = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(client)
-        .addConverterFactory(json.asConverterFactory("application/json".toMediaType())) // ← Agregado el MediaType
+        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .build()
 
-    val service: TeamService = builder.create()
+    val service: TeamService = builder.create(TeamService::class.java)
 }
