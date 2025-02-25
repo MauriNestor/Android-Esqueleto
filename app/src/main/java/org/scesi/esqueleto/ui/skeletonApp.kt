@@ -6,16 +6,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.scesi.esqueleto.data.server.RemoteConnection
+import org.koin.compose.koinInject
+import org.scesi.data.dataSources.TeamRemoteDataSource
 import org.scesi.esqueleto.ui.navigation.Navigation
 import org.scesi.esqueleto.ui.theme.EsqueletoTheme
 
 @Composable
 fun SkeletonApp() {
+    val teamDataSource: TeamRemoteDataSource = koinInject()
     LaunchedEffect(Unit) {
         try {
             val teams = withContext(Dispatchers.IO) {
-                RemoteConnection.service.getTeams()
+                teamDataSource.getTeams()
             }
             Log.d("API_TEST", "Equipos obtenidos: $teams") // Ver en Logcat
         } catch (e: Exception) {

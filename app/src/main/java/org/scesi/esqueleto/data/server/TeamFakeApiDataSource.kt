@@ -1,10 +1,12 @@
 package org.scesi.esqueleto.data.server
 
+import org.koin.core.annotation.Factory
 import org.scesi.data.dataSources.TeamRemoteDataSource
 import org.scesi.domain.models.teams.Team
 import org.scesi.esqueleto.data.server.models.TeamRemote
 import org.scesi.esqueleto.data.tryCall
 
+@Factory
 class TeamFakeApiDataSource: TeamRemoteDataSource {
     override suspend fun getTeams() = tryCall {
         RemoteConnection.service

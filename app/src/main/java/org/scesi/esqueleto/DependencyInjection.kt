@@ -7,6 +7,9 @@ import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
+import org.koin.ksp.generated.module
+import org.scesi.data.DataModule
+import org.scesi.usecases.UseCasesModule
 
 fun Application.initDependencyInjection() {
     startKoin {
