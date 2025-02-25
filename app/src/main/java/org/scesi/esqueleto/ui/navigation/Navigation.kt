@@ -5,7 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import org.scesi.esqueleto.ui.screen.HomeScreen
+import org.scesi.esqueleto.ui.screen.home.HomeScreen
 
 @Composable
 fun Navigation(

@@ -1,4 +1,4 @@
-package org.scesi.usecases
+package org.scesi.usecases.usecases
 
 import org.scesi.domain.repositories.TeamRepository
 
