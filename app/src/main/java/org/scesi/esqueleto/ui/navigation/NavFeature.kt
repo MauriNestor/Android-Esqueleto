@@ -4,4 +4,6 @@ import kotlinx.serialization.Serializable
 object NavFeature {
     @Serializable
     object Home
+    @Serializable
+    object Detail
 }
