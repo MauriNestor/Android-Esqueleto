@@ -29,6 +29,6 @@ private fun NavGraphBuilder.home(navHostController: NavHostController) {
 
 private fun NavGraphBuilder.detail(navHostController: NavHostController) {
     composable<NavFeature.Detail>{
-        DetailScreen()
+        DetailScreen(navHostController)
     }
 }
