@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 
 
 object RemoteConnection {
-    private const val BASE_URL = "https://mocki.io/v1/"
+    private const val BASE_URL = "https://capuchino.scesi.org/data/"
 
     private val json = Json {
         ignoreUnknownKeys = true
